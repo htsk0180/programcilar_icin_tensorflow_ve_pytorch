@@ -1,0 +1,27 @@
+<html>
+<head>
+<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest"> </script>
+<script src="webcam.js"></script>
+<script src="rps-dataset.js"></script>
+</head>
+<body>
+	<div>
+		<div>
+			<video autoplay playsinline muted id="wc" width="224" height="224"></video>
+		</div>
+	</div>
+	<button type="button" id="0" onclick="handleButton(this)" >TAŞ</button>
+	<button type="button" id="1" onclick="handleButton(this)" >KAĞIT</button>
+	<button type="button" id="2" onclick="handleButton(this)" >MAKAS</button>
+	<div id="rocksamples">Taş Örnekleri:</div>
+	<div id="papersamples">Kağıt Örnekleri:</div>
+	<div id="scissorssamples">Makas Örnekleri:</div>
+	<button type="button" id="train" onclick="doTraining()" >Ağı Eğit</button>
+	<div id="dummy">Eğitim tamamlandıktan sonra, tahminleri görmek için 'Tahmin Etmeye Başla'yı ve bitirmek için 'Tahmin Etmeyi Durdur' u tıklayın</div>
+	<button type="button" id="startPredicting" onclick="startPredicting()" >Tahmin Etmeye Başla</button>
+	<button type="button" id="stopPredicting" onclick="stopPredicting()" >Tahmin Etmeyi Durdur</button>
+	<div id="prediction"></div>
+</body>
+
+<script src="index.js"></script>
+</html>
